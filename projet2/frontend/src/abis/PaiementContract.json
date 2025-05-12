@@ -1,0 +1,58 @@
+[
+    {
+      "inputs": [
+        { "internalType": "string",  "name": "patient",     "type": "string" },
+        { "internalType": "string",  "name": "docteur",     "type": "string" },
+        { "internalType": "address", "name": "docteurAddr", "type": "address" },
+        { "internalType": "string",  "name": "dateEnvoi",   "type": "string" }
+      ],
+      "name": "createPaiement",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        { "internalType": "uint256", "name": "index",      "type": "uint256" },
+        { "internalType": "string",  "name": "newStatut",  "type": "string" }
+      ],
+      "name": "updateStatut",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        { "indexed": true,  "internalType": "uint256", "name": "index",     "type": "uint256" },
+        { "indexed": false, "internalType": "string",  "name": "newStatut", "type": "string" }
+      ],
+      "name": "PaiementUpdated",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "getPaiementsCount",
+      "outputs": [
+        { "internalType": "uint256", "name": "", "type": "uint256" }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+      "name": "paiements",
+      "outputs": [
+        { "internalType": "string",  "name": "patient",      "type": "string" },
+        { "internalType": "string",  "name": "docteur",      "type": "string" },
+        { "internalType": "string",  "name": "dateEnvoi",    "type": "string" },
+        { "internalType": "string",  "name": "statut",       "type": "string" },
+        { "internalType": "uint256","name": "montant",      "type": "uint256" },
+        { "internalType": "address","name": "patientAddr",  "type": "address" },
+        { "internalType": "address","name": "docteurAddr",  "type": "address" }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ]
+  
